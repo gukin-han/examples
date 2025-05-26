@@ -2,7 +2,12 @@ package com.example.javaspringcorebasic.member;
 
 public class MemberServiceImpl implements MemberService{
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
+    // 더 이상 MemoryMemberRepository 에 의존하지 않는다
+    private final MemberRepository memberRepository;
+
+    public MemberServiceImpl(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     @Override
     public void join(Member member) {

@@ -2,15 +2,17 @@ package com.example.javaspringcorebasic;
 
 import com.example.javaspringcorebasic.member.Grade;
 import com.example.javaspringcorebasic.member.Member;
-import com.example.javaspringcorebasic.member.MemberServiceImpl;
+import com.example.javaspringcorebasic.member.MemberService;
 import com.example.javaspringcorebasic.order.Order;
-import com.example.javaspringcorebasic.order.OrderServiceImpl;
+import com.example.javaspringcorebasic.order.OrderService;
 
 public class OrderApp {
 
     public static void main(String[] args) {
-        MemberServiceImpl memberService = new MemberServiceImpl();
-        OrderServiceImpl orderService = new OrderServiceImpl();
+
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
 
         long memberId = 1L;
         Member member = new Member(1L, "memberA", Grade.VIP);

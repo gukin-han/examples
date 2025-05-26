@@ -3,12 +3,15 @@ package com.example.javaspringcorebasic;
 import com.example.javaspringcorebasic.member.Grade;
 import com.example.javaspringcorebasic.member.Member;
 import com.example.javaspringcorebasic.member.MemberService;
-import com.example.javaspringcorebasic.member.MemberServiceImpl;
 
 public class MemberApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+
+        // appConfig 가 객체 생성 역할을 담당
+        MemberService memberService = appConfig.memberService();
+//        MemberService memberService = new MemberServiceImpl();
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
