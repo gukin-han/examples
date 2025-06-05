@@ -1,7 +1,7 @@
 package com.example.javaspringcorebasic.lifecycle;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 
 public class NetworkClient {
 
@@ -28,12 +28,14 @@ public class NetworkClient {
     System.out.println("close: " + url);
   }
 
+  @PostConstruct
   public void init() {
     System.out.println("NetworkClient.afterPropertiesSet");
     connect(); // 아직 값이 없음
     call("초기화 연결 메시지");
   }
 
+  @PreDestroy
   public void close() {
     disconnect();
   }
