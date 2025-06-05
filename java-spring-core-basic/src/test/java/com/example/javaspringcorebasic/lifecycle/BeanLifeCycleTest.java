@@ -19,13 +19,11 @@ public class BeanLifeCycleTest {
 
   @Configuration
   static class LifeCycleConfig {
-    @Bean
+    @Bean(initMethod = "init", destroyMethod = "close")
     public NetworkClient networkClient() {
       NetworkClient networkClient = new NetworkClient();
       networkClient.setUrl("http://localhost:8080");
       return networkClient;
     }
-
   }
-
 }
