@@ -11,3 +11,7 @@ spring:
     hibernate:
       ddl-auto: create
     show-sql: true
+jwt:
+  # 32?? ?? ???? ??? : oauthserversecretoauthserversecretoauthserversecretoauthserversecret
+  secret: b2F1dGhzZXJ2ZXJzZWNyZXRvYXV0aHNlcnZlcnNlY3JldG9hdXRoc2VydmVyc2VjcmV0b2F1dGhzZXJ2ZXJzZWNyZXQ=
+  expiration: 3000 # ???
