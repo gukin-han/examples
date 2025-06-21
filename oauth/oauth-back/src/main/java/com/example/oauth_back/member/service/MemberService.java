@@ -2,7 +2,7 @@ package com.example.oauth_back.member.service;
 
 import com.example.oauth_back.member.controller.dto.LoginRequestDto;
 import com.example.oauth_back.member.domain.Member;
-import com.example.oauth_back.member.controller.dto.CreateMemberRequestDto;
+import com.example.oauth_back.member.controller.dto.createREquestDto;
 import com.example.oauth_back.member.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -17,7 +17,7 @@ public class MemberService {
     private final MemberRepository memberRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public Member create(CreateMemberRequestDto request) {
+    public Member create(createREquestDto request) {
 
         Member member = Member.builder()
                 .email(request.getEmail())

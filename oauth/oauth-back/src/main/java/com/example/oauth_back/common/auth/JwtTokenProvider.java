@@ -30,8 +30,10 @@ public class JwtTokenProvider {
     // Claims는 jwt 토큰의 payload부분을 의미
     public String createToken(String email, String role) {
         // payload 생성
-        Claims claims = Jwts.claims().subject(email).build();
-        claims.put("role", role);
+        Claims claims = Jwts.claims()
+                .subject(email)
+                .add("role", role)
+                .build();
 
         // 날짜 객체 생성
         Date currentDate = new Date();
