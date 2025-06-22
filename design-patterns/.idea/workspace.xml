@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b822b851-3c07-460e-a7c7-8ac35cf398d0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/vendingmachine/context/VendingMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/vendingmachine/product/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/vendingmachine/state/CoinInsertedState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/vendingmachine/state/DispensingState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/vendingmachine/state/IdleState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/vendingmachine/state/ProductSelectedState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/vendingmachine/state/VendingMachineState.java" afterDir="false" />
+    <list default="true" id="b822b851-3c07-460e-a7c7-8ac35cf398d0" name="Changes" comment="상태 패턴 예제">
+      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/context/AttendanceRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/context/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/EmployeeState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/OffDutyState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/OnBreakState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/OnVacation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/WorkingState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/vendingmachine/context/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/vendingmachine/context/VendingMachine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/vendingmachine/state/CoinInsertedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/vendingmachine/state/CoinInsertedState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/state/vendingmachine/state/IdleState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/vendingmachine/state/IdleState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -61,6 +63,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="state.hrsystem.context" />
       <recent name="state" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -71,7 +74,7 @@
       <recent name="state.product" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.HRSystemTest">
     <configuration name="ExerciseTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="state.ExerciseTest" />
       <module name="design-patterns" />
@@ -85,8 +88,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HRSystemTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="state.hrsystem.HRSystemTest" />
+      <module name="design-patterns" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="state.hrsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HRSystemTest" />
         <item itemvalue="Application.ExerciseTest" />
       </list>
     </recent_temporary>
@@ -101,11 +118,25 @@
       <updated>1749878581381</updated>
       <workItem from="1749878582854" duration="1000" />
       <workItem from="1750497753313" duration="2864000" />
-      <workItem from="1750520157495" duration="2542000" />
+      <workItem from="1750520157495" duration="2588000" />
+      <workItem from="1750552287755" duration="8797000" />
     </task>
+    <task id="LOCAL-00001" summary="상태 패턴 예제">
+      <option name="closed" value="true" />
+      <created>1750547289009</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1750547289009</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="상태 패턴 예제" />
+    <option name="LAST_COMMIT_MESSAGE" value="상태 패턴 예제" />
   </component>
 </project>

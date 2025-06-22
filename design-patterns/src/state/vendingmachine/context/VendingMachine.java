@@ -14,9 +14,10 @@ public class VendingMachine {
     private final VendingMachineState productSelectedState;
     private final VendingMachineState dispensingState;
 
-    private Map<String, Product> products = Arrays.stream(Product.values())
-            .collect(Collectors.toMap(Product::getName, p -> p));
-    private String selectedProduct = null;
+    private static Map<String, Product> products = Arrays.stream(Product.values())
+            .collect(Collectors.toMap(Product::getId, p -> p));
+
+    private Product selectedProduct = null;
     private VendingMachineState currentState;
     private int currentBalance = 0;
 
@@ -29,51 +30,34 @@ public class VendingMachine {
 
     }
 
-    public VendingMachineState getCoinInsertedState() {
-        return coinInsertedState;
+    public void addBalance(int amount) {
+        this.currentBalance += amount;
     }
 
-    public VendingMachineState getIdleState() {
-        return idleState;
-    }
-
-    public VendingMachineState getProductSelectedState() {
-        return productSelectedState;
-    }
-
-    public VendingMachineState getDispensingState() {
-        return dispensingState;
-    }
-
-    public Map<String, Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(Map<String, Product> products) {
-        this.products = products;
-    }
-
-    public String getSelectedProduct() {
-        return selectedProduct;
-    }
-
-    public void setSelectedProduct(String selectedProduct) {
+    public String selectProduct(String productId) {
+        Product selectedProduct = products.get(productId);
+        if (selectedProduct == null) {
+            throw new IllegalArgumentException("해당 상품은 존재하지 않습니다");
+        }
         this.selectedProduct = selectedProduct;
+
+        return this.selectedProduct.getName();
     }
 
-    public VendingMachineState getCurrentState() {
-        return currentState;
+    public void changeToSelectedState() {
+        this.currentState = productSelectedState;
     }
 
-    public void insertCoin(int amount) {
-        this.currentBalance = this.currentBalance + amount;
+    public boolean isAffordable() {
+        Long price = this.selectedProduct.getPrice();
+        return price <= currentBalance;
     }
 
-    public int getCurrentBalance() {
-        return currentBalance;
-    }
+    public String checkOut() {
+        this.currentBalance -= this.selectedProduct.getPrice();
+        String productName = this.selectedProduct.getName();
+        this.selectedProduct = null;
+        return productName;
 
-    public void setCurrentBalance(int currentBalance) {
-        this.currentBalance = currentBalance;
     }
 }

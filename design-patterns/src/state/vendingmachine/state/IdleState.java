@@ -12,7 +12,6 @@ public class IdleState implements VendingMachineState {
 
     @Override
     public void insertCoin(int amount) {
-        vendingMachine.setCurrentBalance(vendingMachine.getCurrentBalance() + amount);
     }
 
     @Override
