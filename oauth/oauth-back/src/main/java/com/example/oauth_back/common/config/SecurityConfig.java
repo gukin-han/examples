@@ -21,6 +21,9 @@ import java.util.Arrays;
 public class SecurityConfig {
 
     public static final String[] WHITE_LIST = {"/members/create", "/members/login"};
+    public static boolean isWhiteList(String requestURI) {
+        return Arrays.stream(WHITE_LIST).anyMatch(requestURI::startsWith);
+    }
 
     @Value("${jwt.secret}")
     private String secretKey;
@@ -52,7 +55,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource configurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:8080"));
+        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
         configuration.setAllowedMethods(Arrays.asList("*")); // 모든 HTTP 메서드 허용
         configuration.setAllowedHeaders(Arrays.asList("*")); // 모든 헤더값 허용
         configuration.setAllowCredentials(true); // 자격증명허용

@@ -1,5 +1,6 @@
 package com.example.oauth_back.common.auth;
 
+import com.example.oauth_back.common.config.SecurityConfig;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -20,6 +21,7 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.IOException;
 import java.security.Key;
+import java.security.Security;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,7 +42,11 @@ public class JwtTokenFilter extends OncePerRequestFilter {
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-
+        String requestURI = request.getRequestURI();
+        if (SecurityConfig.isWhiteList(requestURI)) {
+            filterChain.doFilter(request, response);
+            return;
+        }
         String jwtToken = parseJwtToken(request);
 
         try {

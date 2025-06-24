@@ -4,7 +4,7 @@ import com.example.oauth_back.common.auth.JwtTokenProvider;
 import com.example.oauth_back.member.controller.dto.LoginRequestDto;
 import com.example.oauth_back.member.controller.dto.LoginResponseDto;
 import com.example.oauth_back.member.domain.Member;
-import com.example.oauth_back.member.controller.dto.createREquestDto;
+import com.example.oauth_back.member.controller.dto.createRequestDto;
 import com.example.oauth_back.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +24,7 @@ public class MemberController {
     private final JwtTokenProvider jwtTokenProvider;
 
     @PostMapping("/create")
-    public ResponseEntity<?> create(@RequestBody createREquestDto request) {
+    public ResponseEntity<?> create(@RequestBody createRequestDto request) {
         Member member = memberService.create(request);
         URI location = URI.create("/members/" + member.getId());
         return ResponseEntity.created(location).build();
