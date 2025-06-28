@@ -42,6 +42,11 @@ export default {
     return {
       email: "",
       password: "",
+      googleUrl: "https://accounts.google.com/o/oauth2/auth",
+      googleClientId: "992040706405-s0gefh3nsjq4nkffnt9lphodvp5s21ef.apps.googleusercontent.com",
+      googleRedirectUrl: "http://localhost:3000/oauth/google/redirect",
+      // openid는 요청하지 않아도 기본적으로 제공. emial과 profile은 요청시 제공.
+      googleScope: "openid email profile",
     };
   },
   methods: {
@@ -61,7 +66,10 @@ export default {
     },
     kakakoLogin() {
     },
-    googleLogin() {},
+    googleLogin() {
+      const auth_uri = `${this.googleUrl}?client_id=${this.googleClientId}&redirect_uri=${this.googleRedirectUrl}&response_type=code&scope=${this.googleScope}`;
+      window.location.href=auth_uri;
+    },
   },
 };
 </script>
