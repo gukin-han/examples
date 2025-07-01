@@ -3,3 +3,4 @@ insert into users
 values
     (1, 'test@naver.com', 'gukin', 'Seoul',
      'aaaaa-aaaaa-aaaaaa-aaaaa-aaaaa-aaaa', 'ACTIVE', 0);
+

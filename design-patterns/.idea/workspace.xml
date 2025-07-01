@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b822b851-3c07-460e-a7c7-8ac35cf398d0" name="Changes" comment="상태 패턴 예제">
-      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/context/AttendanceRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/context/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/EmployeeState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/OffDutyState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/OnBreakState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/OnVacation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/state/hrsystem/state/WorkingState.java" afterDir="false" />
+    <list default="true" id="b822b851-3c07-460e-a7c7-8ac35cf398d0" name="Changes" comment="상태 패턴 예제 - HR 시스템2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/vendingmachine/context/VendingMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/vendingmachine/context/VendingMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/vendingmachine/state/CoinInsertedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/vendingmachine/state/CoinInsertedState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/vendingmachine/state/IdleState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/vendingmachine/state/IdleState.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +109,7 @@
       <workItem from="1749878582854" duration="1000" />
       <workItem from="1750497753313" duration="2864000" />
       <workItem from="1750520157495" duration="2588000" />
-      <workItem from="1750552287755" duration="8797000" />
+      <workItem from="1750552287755" duration="35992000" />
     </task>
     <task id="LOCAL-00001" summary="상태 패턴 예제">
       <option name="closed" value="true" />
@@ -129,7 +119,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750547289009</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="상태 패턴 예제 - HR 시스템">
+      <option name="closed" value="true" />
+      <created>1750581138536</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750581138536</updated>
+    </task>
+    <task id="LOCAL-00003" summary="상태 패턴 예제 - HR 시스템2">
+      <option name="closed" value="true" />
+      <created>1750581146352</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750581146352</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +143,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="상태 패턴 예제" />
-    <option name="LAST_COMMIT_MESSAGE" value="상태 패턴 예제" />
+    <MESSAGE value="상태 패턴 예제 - HR 시스템" />
+    <MESSAGE value="상태 패턴 예제 - HR 시스템2" />
+    <option name="LAST_COMMIT_MESSAGE" value="상태 패턴 예제 - HR 시스템2" />
   </component>
 </project>
